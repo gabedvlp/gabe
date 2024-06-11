@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaq.css">
+        <title>Gabriel Silva ™️</title>
+        <style>
+            main {
+                height: 100vh;
+                background-image: url('MIDIA/digital-art-galaxy.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                filter: blur(3px);
+            }
+            #posLog {
+                position: absolute;
+                width: 70%;
+                top: 25%;
+                left: 20%;
+                background-color: #0081fa70;
+                display: none;
+            }
+            .log {
+                position: absolute;
+                top: 25%;
+                left: 20%;
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.548);
+                border-radius: 15px;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                input {
+                    color: whitesmoke;
+                    padding: 10px;
+                    background-color: transparent;
+                    border: 0;
+                    border-bottom: 2px solid whitesmoke;
+                    font-size: 20px;
+                    width: 80%;
+                    margin: auto;
+                    margin-top: 40px;
+                    margin-bottom: 10px;
+                }
+
+                input[type="text"]:focus,
+                input[type="password"]:focus {
+                    outline: 0;
+                }
+
+                button {
+                    color: whitesmoke;
+                    width: 70%;
+                    margin: auto;
+                    padding: 15px;
+                    margin-top: 50px;
+                    border-radius: 10px;
+                    border: 2px solid black;
+                    background-color: #610096;
+                    font-size: 20px;
+                }
+                button:hover {
+                    background-color: #0081fa;
+                }
+                ::placeholder {
+                    color: whitesmoke;
+                }
+
+                .logTitle {
+                    color: whitesmoke;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    padding: 10px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 40px;
+                    background-color: #610096;
+                }
+
+                .logCont {
+                    border-top: 0;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    width: 100%;
+                    padding: 10px 20px 35px 20px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav id="navBar">
+            <a href="index.html"><img src="MIDIA/home.svg"></a>
+            <img src="MIDIA/html_icon.svg" alt="" class="disabled">
+            <img src="MIDIA/css_icon.svg" alt="" class="disabled">
+            <img src="MIDIA/javascript_icon.svg" alt="" class="disabled">
+            <img src="MIDIA/php_icon.svg" alt="" class="disabled">
+        </nav>
+        <main class="row">
+        </main>
+        <div class="log " id="log">
+            <div class="logTitle" id="logTitle">BEM-VINDO!</div>
+            <div class="logCont">
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="IDENTIFICAÇÃO" required>
+                    <input type="password" id="password" placeholder="SENHA" required>
+                    <button type="submit">ENTRAR</button>
+                </form>
+            </div>
+        </div>
+        <div id="posLog">
+            <h2>LOGIN AUTENTICADO COM JAVASCRIPT!</h2>
+            <p>Estamos progredindo e desenvolvendo todos os dias. Não podemos e nem iremos desistir! Olhando hoje, 11 de Junho de 2024, para o que nós passamos nos últimos anos, sinto uma euforia, um otimismo e vontade de avançar cada vez mais!</p>
+            <p>Você é filho de Iansã, pode vir tempestades, raios, trovões... Isso é pra te lembrar quem está com você. Não desista jamais! Você não está sozinho.</p>
+            <p>São muitos pensamentos desanimadores todos os dias, todas as horas... Não é fácil lidar com tudo ao mesmo tempo. <b>Você não é uma pessoa quebrada!</b> Você é uma pessoa boa, que se importa com as pessoas; sua empatia é gigantesca e tão sincera a ponto de constranger quem recebe seus cuidados.</p>
+            <p>Não mude jamais por causa dos outros. Seja sempre quem você é, seja sincero, se importe, cuide de quem está a sua volta; mas não espere nada em troca das pessoas, faça por sua consciência, faça o que gostaria que fizessem com você. O universo irá recompensar de uma forma que você olhará para essa data com lágrimas nos olhos e pensar: <b>VALEU A PENA</b>!</p>
+            <p id="sign">Gabriel Silva - 11/06/2024 - 00h43</p>
+        </div>
+        <script>
+            document.getElementById("loginForm").addEventListener("submit", function (login) {
+                login.preventDefault();
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var divLog = document.getElementById("log");
+                var posLog = document.getElementById("posLog");
+                var titulo = posLog.querySelector("h2");
+                var assin = document.getElementById("sign");
+                if (username === "gabe" && password === "gabe") {
+                    divLog.remove();
+                    posLog.style.display = "block";
+                    posLog.style.border = "2px solid black"
+                    posLog.style.padding = "5px"
+                    posLog.style.borderRadius = "10px"
+                    titulo.style.textAlign = "center";
+                    assin.style.textAlign = "right";
+                    assin.style.fontWeight = "bold";
+                } else {
+                    alert("username ou password errado");
+                }
+            })
+        </script>
+    </body>
+
+</html>

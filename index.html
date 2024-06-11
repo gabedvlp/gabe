@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaq.css">
+        <title>Gabriel Silva ™️</title>
+        <style>
+            /* ESTILO PARA EXP PROF */
+            .tabcontent {
+                display: none;
+                border: 1px solid;
+                background-color: #a249e6a8;
+                margin-bottom: 3px;
+            }
+
+            .xptabs {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5px;
+                margin-right: 5px;
+
+                button {
+                    background-color: #610096;
+                    margin-bottom: 3px;
+                    font-size: 15px;
+                    padding: 5px;
+                    border: 2px solid black;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+
+                button:hover {
+                    color: black;
+                    background-color: #14f597b9;
+                    font-weight: bold;
+                }
+
+                button.active {
+                    background-color: #00d4f2;
+                    font-weight: bold;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="row">
+            <div class="headbck">
+            </div>
+            <div class="himg">
+                <img src="MIDIA/gabriel.png" alt="">
+            </div>
+            <div class="hinfo">
+                <div class="info fade">
+                    <h1>GABRIEL SILVA</h1>
+                    <p><b>IDADE:</b> 27 anos</p>
+                    <p><b>ESTADO CIVIL:</b> Solteiro</p>
+                    <p><b>ENDEREÇO:</b> Rua Baepina - Irajá, Rio de Janeiro - RJ</p>
+                    <a href="https://wa.me/5521985358527" target="_blank"><img src="MIDIA/whatsapp.jpg" alt=""></a>
+                    <a href="https://www.linkedin.com/in/gabesilva97" target="_blank"><img src="MIDIA/LinkedIn.png" alt=""></a>
+                    <a href="mailto:biel_mds@hotmail.com" target="_blank"><img src="MIDIA/email.png" alt=""></a>
+                </div>
+                <div class="info fade">
+                    <h1>GABRIEL SILVA</h1>
+                    <p><b>FORMAÇÃO:</b> Análise e Desenv. de Sistemas — Universidade Estácio de Sá — <b>CURSANDO</b></p>
+                    <a href="https://wa.me/5521985358527" target="_blank"><img src="MIDIA/whatsapp.jpg" alt=""></a>
+                    <a href="https://www.linkedin.com/in/gabesilva97" target="_blank"><img src="MIDIA/LinkedIn.png" alt=""></a>
+                    <a href="mailto:biel_mds@hotmail.com" target="_blank"><img src="MIDIA/email.png" alt=""></a>
+                </div>
+                <div class="controls">
+                    <a class="prev" onclick="slide(-1)">&#10094;</a>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <a class="nxt" onclick="slide(1)">&#10095;</a>
+                </div>
+            </div>
+        </header>
+        <nav id="navBar">
+            <a href="login.html"><img src="MIDIA/avatar.svg" alt=""></a>
+            <img src="MIDIA/html_icon.svg" alt="" class="disabled">
+            <img src="MIDIA/css_icon.svg" alt="" class="disabled">
+            <img src="MIDIA/javascript_icon.svg" alt="" class="disabled">
+            <img src="MIDIA/php_icon.svg" alt="" class="disabled">
+        </nav>
+        <main class="row">
+            <div class="col-4">
+                <h2>SOBRE MIM</h2>
+                <p>Meu nome é Gabriel, sou estudante de <b>Análise e Desenv. de Sistemas</b> e um profissional do varejo com experiência de 8 anos de atuação que me proporcionou uma base sólida em <b>relacionamento com o cliente</b>, <b>resolução de problemas</b>, <b>produtividade</b> e <b>inteligência emocional</b>.</p>
+                <p>Esta página é um reflexo do meu compromisso com o aprendizado contínuo e uma vitrine para os projetos que estou desenvolvendo enquanto aprimoro minhas habilidades de programação.</p>
+                <p>Estou em busca de novos desafios profissionais, onde eu possa aplicar meu conjunto de habilidades e contribuir de maneira significativa. Embora ainda esteja explorando o que mais quero adicionar aqui, uma coisa é certa: estou em uma jornada contínua de aprendizado e crescimento, tanto pessoal quanto profissionalmente.</p>
+            </div>
+            <div class="col-4">
+                <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+                <div class="xptabs">
+                    <button class="tablink" onclick="abrirExp(event, 'pch')">DROGARIA PACHECO</button> <!-- pacheco -->
+                    <div class="tabcontent" id="pch">
+                        <h3>BALCONISTA DE MEDICAMENTOS</h3>
+                        <h4>ABRIL/2019 - MAIO/2022</h4>
+                        <ul>
+                            <li>Atendimento em Farmácia Popular e PBM</li>
+                            <li>Interpretação de receitas e dispensação de medicamentos</li>
+                            <li>Assistência no controle de produtos próximo ao vencimento</li>
+                            <li>Instrução sobre o uso correto dos medicamentos</li>
+                        </ul>
+                    </div>
+                    <button class="tablink" onclick="abrirExp(event, 'mnd')">DROGARIA MUNDIAL</button> <!-- mundial -->
+                    <div class="tabcontent" id="mnd">
+                        <h3>BALCONISTA DE MEDICAMENTOS</h3>
+                        <h4>JUNHO/2022 - SETEMBRO/2023</h4>
+                        <ul>
+                            <li>Gestão de estoque e rotatividade de produtos</li>
+                            <li>Negociação com fornecedores e parceiros</li>
+                            <li>Prevenção de perdas e redução de desperdício</li>
+                            <li>Compra estratégica de medicamentos</li>
+                        </ul>
+                    </div>
+                    <button class="tablink" onclick="abrirExp(event, 'qnt')">QUINTESSÊNCIA HOMEOPATIA</button>
+                    <!-- quintessencia -->
+                    <div class="tabcontent" id="qnt">
+                        <h3>BALCONISTA DE FARMÁCIA</h3>
+                        <h4>OUTUBRO/2023 - MARÇO/2024</h4>
+                        <ul>
+                            <li>Conferência de medicamentos</li>
+                            <li>Gestão de entregas e pedidos</li>
+                            <li>Atendimento ao cliente</li>
+                            <li>Sistema FÓRMULA CERTA e MOBYPHARMA</li>
+                        </ul>
+                    </div>
+                    <button class="tablink" onclick="abrirExp(event, 'dmt')">DERMATUS COSMET. MÉDICA</button>
+                    <!-- dermatus -->
+                    <div class="tabcontent" id="dmt">
+                        <h3>BALCONISTA DE FARMÁCIA</h3>
+                        <h4>MARÇO/2024 - ATUALMENTE</h4>
+                        <ul>
+                            <li>Atendimento multicanal</li>
+                            <li>Interpretação de receitas e emissão de orçamento</li>
+                            <li>Assistência e orientação na seleção de produtos</li>
+                            <li>Sistema FÓRMULA CERTA e MOBYPHARMA</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>PRINCIPAIS COMPETÊNCIAS</h2>
+                <div>
+                    <p>RESOLUÇÃO DE PROBLEMAS</p>
+                    <div class="skcont">
+                        <div class="skill rsprob"></div>
+                    </div>
+                    <p>PENSAMENTO CRÍTICO</p>
+                    <div class="skcont">
+                        <div class="skill pnscrit"></div>
+                    </div>
+                    <p>COMUNICAÇÃO ASSERTIVA</p>
+                    <div class="skcont">
+                        <div class="skill comunc"></div>
+                    </div>
+                    <p>PRONTIDÃO E SENSO DE URGÊNCIA</p>
+                    <div class="skcont">
+                        <div class="skill sensurg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h2>OBJETIVO</h2>
+                <p>Explorar e aprimorar minhas habilidades de modo a alcançar meu pleno potencial com confiança e eficiência, agregando valor em todas as atividades atribuídas a mim.</p>
+                <p>Busco manter minha mente aberta, valorizar e cultivar relacionamentos que não só me apoiem no meu desenvolvimento pessoal e profissional, mas que também me desafiem e inspirem a pensar além dos limites convencionais, alimentando minha curiosidade e determinação.</p>
+            </div>
+        </main>
+        <script src="script.js"></script>
+        <script>
+            function abrirExp(evt, exp) {
+                var i, tabcontent, tablink;
+
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablink = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablink.length; i++) {
+                    tablink[i].className = tablink[i].className.replace(" active", "")
+                }
+                document.getElementById(exp).style.display = "block";
+                evt.currentTarget.className += " active"
+            }
+        </script>
+    </body>
+
+</html>
